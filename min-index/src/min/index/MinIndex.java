@@ -27,19 +27,20 @@ public class MinIndex {
             arr[x] = value;
             
         }
-        int smallnum = 0;
-        for(int x=0 ; x<arrlength-1 ; x++){
-            
-            int y = x+1; 
-            if(arr[x]<arr[y]){
-            smallnum = arr[x];
+        int smallnum = arr[0];
+        int index = 0;
+        
+        
+        for(int x=0;x<arr.length;x++){
+                if(arr[x] < smallnum){
+                smallnum = arr[x];
+                index= x;
             }
-            
-            
         }
         
         
         System.out.println("smallest number is" + smallnum);
+        System.out.println("index of smallest number is" + index);
         
     }
     
